@@ -31,7 +31,7 @@ func TestGetAPIKey(t *testing.T) {
 				"noAuth": "wop wop...",
 			},
 			expect: "",
-			shouldError: false,
+			shouldError: true,
 		},
 	}
 
