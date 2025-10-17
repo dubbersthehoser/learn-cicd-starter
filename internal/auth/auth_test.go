@@ -1,8 +1,8 @@
 package auth
 
 import (
-	"testing"
 	"net/http"
+	"testing"
 )
 
 func TestGetAPIKey(t *testing.T) {
@@ -23,18 +23,17 @@ func TestGetAPIKey(t *testing.T) {
 			input: map[string]string{
 				"Authorization": "ApiKey",
 			},
-			expect: "",
+			expect:      "",
 			shouldError: true,
 		},
 		test{
 			input: map[string]string{
 				"noAuth": "wop wop...",
 			},
-			expect: "",
+			expect:      "",
 			shouldError: true,
 		},
 	}
-
 
 	for i, _case := range cases {
 		header := http.Header{}
