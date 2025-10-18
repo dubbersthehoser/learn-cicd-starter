@@ -1,0 +1,5 @@
+# yaml
+steps:
+  - name: "alpine"
+    entrypoint: "echo"
+    args: ["hello"]
