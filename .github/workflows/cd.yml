@@ -25,6 +25,9 @@ jobs:
           workload_identity_provider: projects/596691340967/locations/global/workloadIdentityPools/wopwop/providers/github
           service_account: cloud-run-deployer@notely-61793.iam.gserviceaccount.com
 
+      - name: Auth Check
+        run: gcloud auth list && gcloud config list
+
       - name: Build and push image
         run: |
           gcloud builds submit --tag us-central1-docker.pkg.dev/notely-61793/notely-ar-repo/notely:latest .
